@@ -44,7 +44,8 @@ Features
 
 ## RPM building
 
-This repository contains the latest version of the .spec file, source tarball and source RPM for the Atomes program
+This repository contains the latest version of the .spec file, source tarball and source RPM for the Atomes program ...
+... and the script to build it !
 
 ## Documentation
 
