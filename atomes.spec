@@ -71,6 +71,7 @@ make install DESTDIR=$RPM_BUILD_ROOT
 %{_datadir}/atomes/
 %{_datadir}/bash-completion/completions/atomes
 %{_datadir}/applications/%{name}.desktop
+%{_mandir}/man1/atomes.1.gz
 
 %changelog
 * Mon Aug 29 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.0
