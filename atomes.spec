@@ -1,5 +1,5 @@
 Name:           atomes
-Version:        1.1.0
+Version:        1.1.1
 Release:        1
 Summary:        An atomistic toolbox
 Group:          Productivity/Scientific/Physics
@@ -33,7 +33,7 @@ Requires: gtk3
 Requires: desktop-file-utils
 Requires: bash-completion
 
-Provides: atomes = %{version}-%{release}
+Provides: atomes = %{version}
 
 %description
 Atomes: a toolbox to analyze, to visualize 
@@ -76,3 +76,6 @@ make install DESTDIR=$RPM_BUILD_ROOT
 %changelog
 * Mon Aug 29 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.0
 - Initial release of the Atomes program v1.1.0
+
+* Tue Sep 13 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.1
+- Release of Atomes program v1.1.1 - bug correction: workspace double click
