@@ -1,5 +1,5 @@
 Name:           atomes
-Version:        1.1.1
+Version:        1.1.2
 Release:        1
 Summary:        An atomistic toolbox
 Group:          Productivity/Scientific/Physics
