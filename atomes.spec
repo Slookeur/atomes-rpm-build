@@ -75,28 +75,28 @@ make install DESTDIR=$RPM_BUILD_ROOT
 
 %changelog
 Fri Sep 23 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.5
--         * Bug correction:
--                w_search.c: selection not to crash if atom_win is closed
+* Bug correction:
+* w_search.c: selection not to crash if atom_win is closed
 
 Thu Sep 22 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.4
--         * Bug correction: 
--	 	read_coord.c: Windows to handle properly EOL symbols
--		m_curve.c: Windows to not crash when destroying label widget
--		glview.c: correct GWARNING messages on widget scale
+* Bug correction: 
+* read_coord.c: Windows to handle properly EOL symbols
+* m_curve.c: Windows to not crash when destroying label widget
+* glview.c: correct GWARNING messages on widget scale
 
 Thu Sep 15 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.3
--         * Bug correction: 
--	 	read_opengl.c: correct 'read_atom_b'
--		initring.c: coorect 'send_rings_opengl_'
+* Bug correction: 
+* read_opengl.c: correct 'read_atom_b'
+* initring.c: coorect 'send_rings_opengl_'
 
 Wed Sep 14 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.2
--         * Bug correction: 
--	 	atom_action.c: recompute bonding on passivate
--	 	bdcall.c: do not trigger menu init on passivate
+* Bug correction: 
+* atom_action.c: recompute bonding on passivate
+* bdcall.c: do not trigger menu init on passivate
 
 Tue Sep 13 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.1
--         * Bug correction: double click on workspace
+* Bug correction: double click on workspace
 
 Mon Aug 28 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.0
--         Initial release of the Atomes program v1.1.0
--         * Enjoy !
+* Initial release of the Atomes program v1.1.0
+* Enjoy !
