@@ -97,6 +97,6 @@ make install DESTDIR=$RPM_BUILD_ROOT
 * Tue Sep 13 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.1
 - Bug correction: double click on workspace
 
-* Mon Aug 28 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.0
+* Mon Aug 29 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.0
 - Initial release of the Atomes program v1.1.0
  Enjoy !
