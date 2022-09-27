@@ -5,7 +5,7 @@ Summary:        An atomistic toolbox
 Group:          Productivity/Scientific/Physics
 License:        AGPLv3+
 Source:         https://github.com/Slookeur/Atomes-rpm-build/blob/main/%{name}-%{version}.tar.gz
-URL:            http://atomes.ipcms.fr/
+URL:            https://atomes.ipcms.fr/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires:  make
