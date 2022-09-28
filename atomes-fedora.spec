@@ -13,9 +13,14 @@ BuildRequires: gcc
 BuildRequires: libgfortran
 BuildRequires: gtk3-devel
 BuildRequires: libxml2-devel
+BuildRequires: freeglut-devel
+BuildRequires: libgfortran
 BuildRequires: mesa-libGLU-devel
 BuildRequires: libepoxy-devel
-BuildRequires: ffmpeg-devel
+BuildRequires: libavutil-free-devel
+BuildRequires: libavcodec-free-devel
+BuildRequires: libavformat-free-devel
+BuildRequires: libswscale-free-devel
 BuildRequires: desktop-file-utils
 
 # For Suse-based linux
@@ -32,7 +37,10 @@ BuildRequires: gcc-gfortran
 Requires: gtk3
 Requires: libgfortran
 Requires: libxml2
-Requires: ffmpeg-libs
+Requires: libavutil-free
+Requires: libavcodec-free
+Requires: libavformat-free
+Requires: libswscale-free
 Requires: mesa-libGLU
 Requires: libepoxy
 Requires: desktop-file-utils
