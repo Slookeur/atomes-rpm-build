@@ -47,6 +47,12 @@ Features
 This repository contains the latest version of the .spec file, source tarball and source RPM for the Atomes program ...
 ... and the script to build it !
 
+You will find 2 folders: 
+
+  - 'Fedora' : contains the spec file, and RPMs, with directives specific to the Fedora Linux distribution
+  - 'RPM-fusion' : contains the spec file, and RPMS, with more general directives
+  
+
 ## Documentation
 
 The documenation is hosted on [GitHub][github] here: [Atomes documentation][atomes-doc]
