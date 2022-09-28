@@ -33,7 +33,7 @@ Requires: gtk3
 Requires: desktop-file-utils
 Requires: bash-completion
 
-Provides: atomes-%{version}
+Provides: %{name}-%{version}
 
 %description
 Atomes: a toolbox to analyze, to visualize 
