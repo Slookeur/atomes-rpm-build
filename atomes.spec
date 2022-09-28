@@ -8,33 +8,38 @@ Source:         https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{
 URL:            https://atomes.ipcms.fr/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
-BuildRequires:  make
-BuildRequires:  gcc
-BuildRequires:  libgfortran
-BuildRequires:  gtk3-devel
-BuildRequires:  libxml2-devel
-BuildRequires:  libgfortran
-BuildRequires:  libepoxy-devel
-BuildRequires:  libavutil-free-devel
-BuildRequires:  libavcodec-free-devel
-BuildRequires:  libavformat-free-devel
-BuildRequires:  libswscale-free-devel
-# BuildRequires:  ffmpeg-devel
-BuildRequires:  desktop-file-utils
+BuildRequires: make
+BuildRequires: gcc
+BuildRequires: libgfortran
+BuildRequires: gtk3-devel
+BuildRequires: libxml2-devel
+BuildRequires: libgfortran
+BuildRequires: libepoxy-devel
+BuildRequires: libavutil-free-devel
+BuildRequires: libavcodec-free-devel
+BuildRequires: libavformat-free-devel
+BuildRequires: libswscale-free-devel
+# BuildRequires: ffmpeg-devel
+BuildRequires: desktop-file-utils
 
 # For Suse-based linux
 %if 0%{?suse_version}
-BuildRequires:  gcc-fortran
-BuildRequires:  update-desktop-files
+BuildRequires: gcc-fortran
+BuildRequires: update-desktop-files
 %endif
  
 # For RedHat-based linux
 %if 0%{?fedora_version} || 0%{?rhel_version} || 0%{?centos_version}
-BuildRequires:  gcc-gfortran
+BuildRequires: gcc-gfortran
 %endif
 
 Requires: gtk3
 Requires: desktop-file-utils
+Requires: libavutil-free
+Requires: libavcodec-free
+Requires: libavformat-free
+Requires: libswscale-free
+# Requires: ffmpeg
 Requires: bash-completion
 
 Provides: %{name}-%{version}
