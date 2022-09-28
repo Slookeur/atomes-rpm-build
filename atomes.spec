@@ -15,7 +15,11 @@ BuildRequires:  gtk3-devel
 BuildRequires:  libxml2-devel
 BuildRequires:  libgfortran
 BuildRequires:  libepoxy-devel
-BuildRequires:  ffmpeg-devel
+BuildRequires:  libavutil-free-devel
+BuildRequires:  libavcodec-free-devel
+BuildRequires:  libavformat-free-devel
+BuildRequires:  libswscale-free-devel
+# BuildRequires:  ffmpeg-devel
 BuildRequires:  desktop-file-utils
 
 # For Suse-based linux
