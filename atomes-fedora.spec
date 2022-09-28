@@ -9,6 +9,7 @@ URL:            https://atomes.ipcms.fr/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
 BuildRequires: make
+BuildRequires: autoconf
 BuildRequires: gcc
 BuildRequires: gcc-gfortran
 BuildRequires: libgfortran
