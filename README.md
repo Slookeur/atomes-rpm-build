@@ -67,6 +67,11 @@ You will find 2 folders:
    It is possible to get it back by installing the `ffmpeg-libs` package from [RPM Fusion][fusion]
 
   - 'RPM-fusion' : contains the spec file, and RPMS, with more general directives
+
+   This package uses the following libs distributed by [RPM Fusion][fusion]
+
+    - ffmpeg-devel (to build **Atomes**)
+    - ffmpeg-libs (at runtime) 
   
 
  
