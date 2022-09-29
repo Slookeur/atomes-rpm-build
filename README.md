@@ -51,7 +51,7 @@ You will find 2 folders:
 
   - 'Fedora' : contains the spec file, and RPMs, with directives specific to the [Fedora][fedora] Linux distribution
 
-   This package uses the following libs distributed along with Fedora:
+   This package uses the following libs distributed along with [Fedora][fedora]:
 
     - libavcodec-free(-devel) 
     - libavformat-free(-devel)
