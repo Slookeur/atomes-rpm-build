@@ -70,7 +70,7 @@ You will find 2 folders:
 
    This package uses the following libs distributed by [RPM Fusion][fusion]
 
-    - ffmpeg-devel (to build **Atomes**)
+    - ffmpeg-devel (to build Atomes)
     - ffmpeg-libs (at runtime) 
   
 
