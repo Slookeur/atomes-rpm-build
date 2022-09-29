@@ -1,6 +1,6 @@
 Name:           atomes
 Version:        1.1.5
-Release:        1
+Release:        1%{?dist}
 Summary:        An atomistic toolbox
 Group:          Productivity/Scientific/Physics
 License:        AGPLv3+
