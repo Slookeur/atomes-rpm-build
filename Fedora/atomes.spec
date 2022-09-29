@@ -8,7 +8,7 @@ Source0:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{
 Source1:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{version}.tar.gz.asc
 Source2:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/atomes.gpg
 URL:            https://atomes.ipcms.fr/
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
+BuildRoot:      %{buildroot}
 
 BuildRequires: gnupg2
 BuildRequires: make
@@ -61,12 +61,12 @@ Atomes offers a user-friendly assistant to help
 and guide the scientist step by step to achieve this crucial step.
 
 %prep
-# %{gpgverify} --keyring='%{SOURCE2}' --signature='%{SOURCE1}' --data='%{SOURCE0}'
+%{gpgverify} --keyring='%{SOURCE2}' --signature='%{SOURCE1}' --data='%{SOURCE0}'
 %autosetup
 
 %build
 %configure --prefix=/usr
-make `%{? smp_flags}`
+make `%{?_smp_mflags}`
 
 %install
 make install DESTDIR=$RPM_BUILD_ROOT
