@@ -6,7 +6,7 @@ Group:          Productivity/Scientific/Physics
 License:        AGPL-3.0-or-later
 Source0:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{version}.tar.gz
 Source1:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{version}.tar.gz.asc
-Source2:        atomes.gpg
+Source2:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/atomes.gpg
 URL:            https://atomes.ipcms.fr/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
