@@ -52,6 +52,7 @@ You will find 2 folders:
   - 'Fedora' : contains the spec file, and RPMs, with directives specific to the Fedora Linux distribution
 
    In that case the encoding of videos using proprietary codecs is disbabled: 
+
     - MP4
     - H264
     - Flash
