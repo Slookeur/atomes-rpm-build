@@ -51,11 +51,13 @@ You will find 2 folders:
 
   - 'Fedora' : contains the spec file, and RPMs, with directives specific to the Fedora Linux distribution
 
-   In that case the encoding of videos using proprietary codecs is disbabled: 
+   In that case the encoding of videos using proprietary codecs is disabled: 
 
     - MP4
     - H264
     - Flash
+
+   It is possible to get it back installing the `ffmpeg-libs` package from [RPM Fusion][fusion]
 
   - 'RPM-fusion' : contains the spec file, and RPMS, with more general directives
   
@@ -77,3 +79,4 @@ The documenation is hosted on [GitHub][github] here: [Atomes documentation][atom
 [lammps]:https://lammps.sandia.gov/
 [cpmd]:http://www.cpmd.org
 [cp2k]:http://cp2k.berlios.de
+[fusion]:https://rpmfusion.org
