@@ -49,7 +49,14 @@ This repository contains the latest version of the .spec file, source tarball an
 
 You will find 2 folders: 
 
-  - 'Fedora' : contains the spec file, and RPMs, with directives specific to the Fedora Linux distribution
+  - 'Fedora' : contains the spec file, and RPMs, with directives specific to the [Fedora][fedora] Linux distribution
+
+   This package uses the following libs distributed along with Fedora:
+
+    - libavcodec-free(-devel) 
+    - libavformat-free(-devel)
+    - libavutil-free(-devel)
+    - libswscale-free(-devel)
 
    In that case the encoding of videos using proprietary codecs is disabled: 
 
@@ -57,11 +64,12 @@ You will find 2 folders:
     - H264
     - Flash
 
-   It is possible to get it back installing the `ffmpeg-libs` package from [RPM Fusion][fusion]
+   It is possible to get it back by installing the `ffmpeg-libs` package from [RPM Fusion][fusion]
 
   - 'RPM-fusion' : contains the spec file, and RPMS, with more general directives
   
 
+ 
 ## Documentation
 
 The documenation is hosted on [GitHub][github] here: [Atomes documentation][atomes-doc]
@@ -79,4 +87,5 @@ The documenation is hosted on [GitHub][github] here: [Atomes documentation][atom
 [lammps]:https://lammps.sandia.gov/
 [cpmd]:http://www.cpmd.org
 [cp2k]:http://cp2k.berlios.de
+[fedora]:https://getfedora.org/en/
 [fusion]:https://rpmfusion.org
