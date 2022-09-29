@@ -3,11 +3,14 @@ Version:        1.1.5
 Release:        1%{?dist}
 Summary:        An atomistic toolbox
 Group:          Productivity/Scientific/Physics
-License:        AGPLv3+
-Source:         https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{version}.tar.gz
+License:        AGPL-3.0-or-later
+Source0        https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{version}.tar.gz
+Source1:	./%{name}-%{version}.tar.gz.asc
+Source2:	atomes.gpg
 URL:            https://atomes.ipcms.fr/
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 
+BuildRequires: gnupg2
 BuildRequires: make
 BuildRequires: autoconf
 BuildRequires: gcc
@@ -58,11 +61,12 @@ Atomes offers a user-friendly assistant to help
 and guide the scientist step by step to achieve this crucial step.
 
 %prep
+%{gpgverify} --keyring='%{SOURCE2}' --signature='%{SOURCE1}' --data='%{SOURCE0}'
 %autosetup
 
 %build
 %configure --prefix=/usr
-make
+make `%{? smp_flags}`
 
 %install
 make install DESTDIR=$RPM_BUILD_ROOT
