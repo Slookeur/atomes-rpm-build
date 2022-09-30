@@ -43,10 +43,10 @@ Provides: %{name} = %{version}-%{release}
 
 %description
 Atomes: a toolbox to analyze, to visualize 
-and to edit/create three-dimensional atomistic models.
+and to create/edit three-dimensional atomistic models.
 It offers a workspace that allows to have many projects opened simultaneously.
 The different projects in the workspace can exchange data: 
-analysis results, atomic coordinates…
+analysis results, atomic coordinates...
 Atomes also provides an advanced input preparation system 
 for further calculations using well known molecular dynamics codes:
 
@@ -71,7 +71,8 @@ make `%{?_smp_mflags}`
 %make_install
 
 %files
-%doc
+%doc AUTHORS README.md
+%license COPYING
 %{_bindir}/atomes
 %{_datadir}/doc/atomes/
 %{_datadir}/atomes/
