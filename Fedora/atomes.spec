@@ -18,7 +18,6 @@ BuildRequires: libgfortran
 BuildRequires: gtk3-devel
 BuildRequires: libxml2-devel
 BuildRequires: freeglut-devel
-BuildRequires: libgfortran
 BuildRequires: mesa-libGLU-devel
 BuildRequires: libepoxy-devel
 BuildRequires: libavutil-free-devel
@@ -34,6 +33,7 @@ Requires: libavutil-free
 Requires: libavcodec-free
 Requires: libavformat-free
 Requires: libswscale-free
+Requires: freeglut
 Requires: mesa-libGLU
 Requires: libepoxy
 Requires: desktop-file-utils
@@ -71,7 +71,6 @@ make `%{?_smp_mflags}`
 %make_install
 
 %files
-%doc AUTHORS README.md
 %license COPYING
 %{_bindir}/atomes
 %{_datadir}/doc/atomes/
