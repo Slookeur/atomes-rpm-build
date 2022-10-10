@@ -3,8 +3,10 @@
 ![](https://github.com/Slookeur/Atomes.io/workflows/ns/badge.svg)
 ![](https://www.codefactor.io/repository/github/Slookeur/Atomes/badge)
 
-[Atomes][atomes] is a Free (Open Source) cross-platform toolbox developed to analyze, to visualize and to edit/create three-dimensional atomistic models.
-It oﬀers a workspace that allows to have many projects opened simultaneously.
+[Atomes][atomes] is a Free (Open Source) cross-platform software licensed under the terms 
+of the Affero GPL v3+ license. 
+Atoms is a toolbox developed to analyze, to visualize and to create/edit three-dimensional atomistic models.
+It offers a workspace that allows to have many projects opened simultaneously.
 
 The different projects in the workspace can exchange data: analysis results, atomic coordinates ...
 Atomes also provides an advanced input preparation system for further calculations using well known molecular dynamics codes:
@@ -13,9 +15,8 @@ Atomes also provides an advanced input preparation system for further calculatio
 - ab-initio MD : [CPMD][cpmd] and [CP2K][cp2k]
 - QM-MM MD : [CPMD][cpmd] and [CP2K][cp2k]
 
-To prepare the input ﬁlles for these calculations is likely to be the key, and most complicated step towards MD simulations. Atomes offers a user-friendly assistant to help and guide the user step by step to achieve this crucial step.
-Features
-
+To prepare the input ﬁlles for these calculations is likely to be the key, and most complicated step towards MD simulations. 
+Atomes offers a user-friendly assistant to help and guide the user step by step to achieve this crucial step.
 
 ## Features
 
@@ -26,6 +27,116 @@ Features
 	- Classical MD: [DLPOLY][dlpoly] and [LAMMPS][lammps]
 	- ab-initio MD: [CPMD][cpmd] and [CP2K][cp2k]
 	- QM-MM MD: [CPMD][cpmd] and [CP2K][cp2k]
+
+## RPM building
+
+This repository contains the latest version of the .spec file, source tarball and source RPM for the Atomes program ...
+... and the script to build it !
+
+You will find 2 folders:
+
+  - 'Fedora' : contains the spec file, and RPMs, with directives specific to the [Fedora][fedora] Linux distribution
+
+   This package uses the following libs distributed along with [Fedora][fedora]:
+
+    - libavcodec-free(-devel)
+    - libavformat-free(-devel)
+    - libavutil-free(-devel)
+    - libswscale-free(-devel)
+
+   In that case the encoding of videos using proprietary codecs is disabled:
+
+    - MP4
+    - H264
+    - Flash
+
+   It is possible to get it back by installing the `ffmpeg-libs` package from [RPM Fusion][fusion]
+
+  - 'RPM-fusion' : contains the spec file, and RPMS, with more general directives
+
+   This package uses the following libs distributed by [RPM Fusion][fusion]
+
+    - ffmpeg-devel (to build Atomes)
+    - ffmpeg-libs (at runtime)
+
+## Build instructions
+
+To build ***Atomes***: 
+
+> ./configure
+
+> make
+
+### Build options
+
+#### Building the GTK4 version of ***Atomes***
+
+***Atomes*** uses the [GTK][gtk] lib for the GUI, by default GTK3 is used, however it is possible to build the GTK4 version (beta), to do that edit the `Makefile` and change:
+
+  1. Edit the file "configure.ac": 
+
+And change: 
+
+> PKG_CHECK_MODULES(GTK, [gtk+-3.0 >= 3.16])
+> dnl PKG_CHECK_MODULES(GTK, [gtk4 >= 4.60])
+
+To:
+
+dnl PKG_CHECK_MODULES(GTK, [gtk+-3.0 >= 3.16])
+PKG_CHECK_MODULES(GTK, [gtk4 >= 4.60])
+
+  2. Edit the file `scr/Makefile.am`
+
+And change:
+
+> -DGTK3
+
+To:
+
+> -DGTK4
+
+  3. Update the `configure` script:
+
+> rm -f aclocal.m4
+> rm -f configure~
+> aclocal
+> autoconf
+> automake --add-missing
+
+  4. Build ***Atomes***
+
+Here are some issues with GTK4 that cannot be sovled for the time being:
+  1. No way to use Pango markups in menus
+  2. Add widgets to menus is impossible, ex: color selections
+  3. Selection in tables is not working properly (see the `Measures` dialog: wrong lines are picked)
+  4. No way to moves lines in tables (curves and crystal builder)
+
+Issues 1) and 2) are the most critical so far since ***Atomes*** menus are dynamical and cannot be created by reading a basic XML file. 
+
+#### Building the serial version of ***Atomes***
+
+By default ***Atomes*** uses [OpenMP][openmp] to parallelize several calculations over the CPU cores. 
+It is possible to turn this off, and to build a serial version of ***Atomes***, to do that:
+
+  1. Edit the file `src/Makefile.am` 
+
+And remove all: 
+
+> -DOPENMP -fopenmp 
+
+  2. Update the `configure` script:
+
+> rm -f aclocal.m4
+> rm -f configure~
+> aclocal
+> autoconf
+> automake --add-missing
+
+  3. Build ***Atomes***
+
+## Install ***Atomes***
+
+> make install
 
 ## Who's behind ***Atomes***
 
@@ -42,42 +153,13 @@ Features
   <a href="https://www.ipcms.fr/"><img width="100" src="https://www.ipcms.fr/wp-content/uploads/2020/09/cropped-dessin_logo_IPCMS_couleur_vectoriel_r%C3%A9%C3%A9quilibr%C3%A9-2.png" alt="IPCMS logo" align="center"></a>
 </p>
 
-## RPM building
-
-This repository contains the latest version of the .spec file, source tarball and source RPM for the Atomes program ...
-... and the script to build it !
-
-You will find 2 folders: 
-
-  - 'Fedora' : contains the spec file, and RPMs, with directives specific to the [Fedora][fedora] Linux distribution
-
-   This package uses the following libs distributed along with [Fedora][fedora]:
-
-    - libavcodec-free(-devel) 
-    - libavformat-free(-devel)
-    - libavutil-free(-devel)
-    - libswscale-free(-devel)
-
-   In that case the encoding of videos using proprietary codecs is disabled: 
-
-    - MP4
-    - H264
-    - Flash
-
-   It is possible to get it back by installing the `ffmpeg-libs` package from [RPM Fusion][fusion]
-
-  - 'RPM-fusion' : contains the spec file, and RPMS, with more general directives
-
-   This package uses the following libs distributed by [RPM Fusion][fusion]
-
-    - ffmpeg-devel (to build Atomes)
-    - ffmpeg-libs (at runtime) 
-  
-
- 
 ## Documentation
 
 The documenation is hosted on [GitHub][github] here: [Atomes documentation][atomes-doc]
+
+## Tutorials
+
+Tutorial are regrouped and hosted on [GitHub][github] here: [Atomes tutorials][atomes-tuto]
 
 [slr]:https://www.ipcms.fr/sebastien-le-roux/
 [cnrs]:https://www.cnrs.fr/
@@ -85,12 +167,11 @@ The documenation is hosted on [GitHub][github] here: [Atomes documentation][atom
 [github]:https://github.com/
 [jekyll]:https://jekyllrb.com/
 [atomes]:https://atomes.ipcms.fr/
-[atomes-rpm-build]:https://slookeur.github.io/Atomes-rpm-build/
 [atomes-doc]:https://slookeur.github.io/Atomes-doc/
 [atomes-tuto]:https://slookeur.github.io/Atomes-tuto/
 [dlpoly]:https://www.scd.stfc.ac.uk/Pages/DL_POLY.aspx
 [lammps]:https://lammps.sandia.gov/
 [cpmd]:http://www.cpmd.org
 [cp2k]:http://cp2k.berlios.de
-[fedora]:https://getfedora.org/en/
-[fusion]:https://rpmfusion.org
+[gtk]:https://www.gtk.org/
+[openmp]:https://www.openmp.org/
