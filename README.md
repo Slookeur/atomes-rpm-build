@@ -63,11 +63,15 @@ You will find 2 folders:
 
 To build ***Atomes***: 
 
-```./configure```
+```
+./configure
+```
 
 Followed by:
 
-```make```
+```
+make
+```
 
 ### Build options
 
@@ -146,7 +150,9 @@ automake --add-missing
 
 ## Install ***Atomes***
 
-> make install
+```
+make install
+```
 
 ## Who's behind ***Atomes***
 
