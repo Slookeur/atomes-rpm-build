@@ -63,7 +63,7 @@ You will find 2 folders:
 
 To build ***Atomes***: 
 
-> ./configure
+<<./configure>>
 
 > make
 
