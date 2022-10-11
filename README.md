@@ -73,7 +73,7 @@ To build ***Atomes***:
 
 ***Atomes*** uses the [GTK][gtk] lib for the GUI, by default GTK3 is used, however it is possible to build the GTK4 version (beta), to do that edit the `Makefile` and change:
 
-  1. Edit the file "configure.ac": 
+  1. Edit the file `configure.ac` 
 
 And change: 
 
