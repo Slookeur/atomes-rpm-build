@@ -63,9 +63,11 @@ You will find 2 folders:
 
 To build ***Atomes***: 
 
-<<./configure>>
+```./configure```
 
-> make
+Followed by:
+
+```make```
 
 ### Build options
 
@@ -77,9 +79,8 @@ To build ***Atomes***:
 
 And change: 
 
-> PKG_CHECK_MODULES(GTK, [gtk+-3.0 >= 3.16])
-
-> dnl PKG_CHECK_MODULES(GTK, [gtk4 >= 4.60])
+```PKG_CHECK_MODULES(GTK, [gtk+-3.0 >= 3.16])
+dnl PKG_CHECK_MODULES(GTK, [gtk4 >= 4.60])```
 
 To:
 
