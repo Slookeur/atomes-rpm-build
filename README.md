@@ -176,3 +176,5 @@ Tutorial are regrouped and hosted on [GitHub][github] here: [Atomes tutorials][a
 [cp2k]:http://cp2k.berlios.de
 [gtk]:https://www.gtk.org/
 [openmp]:https://www.openmp.org/
+[fedora]:https://getfedora.org/
+[fusion]:https://rpmfusion.org/
