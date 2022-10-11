@@ -126,15 +126,12 @@ And remove all:
 
   2. Update the `configure` script:
 
-` rm -f aclocal.m4
+  `rm -f aclocal.m4`
 
- rm -f configure~
-
- aclocal
-
- autoconf
-
- automake --add-missing`
+  `rm -f configure~`
+  `aclocal`
+  `autoconf`
+  `automake --add-missing`
 
   3. Build ***Atomes***
 
