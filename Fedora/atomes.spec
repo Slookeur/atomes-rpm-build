@@ -27,15 +27,15 @@ BuildRequires: libswscale-free-devel
 BuildRequires: desktop-file-utils
 
 Requires: gtk3
-Requires: libgfortran
-Requires: libxml2
-Requires: libavutil-free
-Requires: libavcodec-free
-Requires: libavformat-free
-Requires: libswscale-free
+# Requires: libgfortran
+# Requires: libxml2
+# Requires: libavutil-free
+# Requires: libavcodec-free
+# Requires: libavformat-free
+# Requires: libswscale-free
 Requires: freeglut
 Requires: mesa-libGLU
-Requires: libepoxy
+# Requires: libepoxy
 Requires: desktop-file-utils
 Requires: bash-completion
 
