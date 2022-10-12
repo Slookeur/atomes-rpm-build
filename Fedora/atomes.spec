@@ -11,6 +11,7 @@ URL:            https://atomes.ipcms.fr/
 
 BuildRequires: gnupg2
 BuildRequires: make
+BuildRequires: automake
 BuildRequires: autoconf
 BuildRequires: gcc
 BuildRequires: gcc-gfortran
