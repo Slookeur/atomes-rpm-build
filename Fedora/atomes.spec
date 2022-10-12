@@ -2,7 +2,7 @@ Name:           atomes
 Version:        1.1.6
 Release:        1%{?dist}
 Summary:        An atomistic toolbox
-License:        AGPL-3.0-or-later
+License:        AGPLv3+
 Source0:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{version}.tar.gz
 Source1:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{version}.tar.gz.asc
 Source2:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/atomes.gpg
