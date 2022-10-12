@@ -29,12 +29,12 @@ BuildRequires: update-desktop-files
 %endif
  
 Requires: gtk3
-Requires: libgfortran
-Requires: libxml2
+#Requires: libgfortran
+# Requires: libxml2
 Requires: ffmpeg-libs
 Requires: freeglut
 Requires: mesa-libGLU
-Requires: libepoxy
+# Requires: libepoxy
 Requires: desktop-file-utils
 Requires: bash-completion
 
@@ -79,7 +79,7 @@ make `%{?_smp_mflags}`
 %{_mandir}/man1/atomes.1.gz
 
 %changelog
-* Wed Oct 11 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.6-1
+* Wed Oct 12 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.6-1
 - Bug correction: 
   w_library.c: lib_preview_plot = NULL;
 - Improvements:
