@@ -5,8 +5,8 @@ Summary:        An atomistic toolbox
 License:        AGPL-3.0-or-later
 Source0:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{version}.tar.gz
 Source1:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{version}.tar.gz.asc
-Source2:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/atomes.gpg
-URL:            https://atomes.ipcms.fr/
+Source2:        %{name}.gpg
+URL:            https://%{name}.ipcms.fr/
 
 BuildRequires: gnupg2
 BuildRequires: make
@@ -71,15 +71,15 @@ make `%{?_smp_mflags}`
 
 %files
 %license COPYING
-%{_bindir}/atomes
-%{_datadir}/doc/atomes/
-%{_datadir}/atomes/
-%{_datadir}/bash-completion/completions/atomes
+%{_bindir}/%{name}
+%{_datadir}/doc/%{name}/
+%{_datadir}/%{name}/
+%{_datadir}/bash-completion/completions/%{name}
 %{_datadir}/applications/%{name}.desktop
-%{_mandir}/man1/atomes.1.gz
+%{_mandir}/man1/%{name}.1.gz
 
 %changelog
-* Wed Oct 12 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.6-1
+* Thu Oct 13 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.6-1
 - Bug correction: 
   w_library.c: lib_preview_plot = NULL;
 - Improvements:
