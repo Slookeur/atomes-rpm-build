@@ -60,7 +60,7 @@ Atomes offers a user-friendly assistant to help and guide the scientist
 step by step to achieve this crucial step.
 
 %prep
-# %{gpgverify} --keyring='%{SOURCE2}' --signature='%{SOURCE1}' --data='%{SOURCE0}'
+# %%{gpgverify} --keyring='%%{SOURCE2}' --signature='%%{SOURCE1}' --data='%%{SOURCE0}'
 %autosetup
 
 %build
@@ -69,6 +69,9 @@ make `%{?_smp_mflags}`
 
 %install
 %make_install
+
+%check
+desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
 
 %files
 %license COPYING
