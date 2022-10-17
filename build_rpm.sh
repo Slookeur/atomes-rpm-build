@@ -1,9 +1,5 @@
 #!/bin/bash
 
-VERSION="1.1.5"
-if [ -d atomes-$VERSION ]; then
-  rm -rf atomes-$VERSION
-fi
-tar -zxf atomes-$VERSION.tar.gz
+# The following line requires to have a *.spec file in the active directory
 fedpkg --release f36 local
 
