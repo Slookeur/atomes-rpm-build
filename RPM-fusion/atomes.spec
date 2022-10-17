@@ -1,10 +1,11 @@
 Name:           atomes
+%global upname Atomes-GNU
 Version:        1.1.7
-Release:        8%{?dist}
+Release:        1%{?dist}
 Summary:        An atomistic toolbox
 License:        AGPL-3.0-or-later
-Source0:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{version}.tar.gz
-Source1:        https://github.com/Slookeur/Atomes-rpm-build/raw/main/%{name}-%{version}.tar.gz.asc
+Source0:        https://github.com/Slookeur/%{upname}/archive/refs/tags/v%{version}.tar.gz
+Source1:        ./v%{version}.tar.gz.asc
 Source2:        %{name}.gpg
 URL:            https://%{name}.ipcms.fr/
 
@@ -60,7 +61,7 @@ step by step to achieve this crucial step.
 
 %prep
 # %%{gpgverify} --keyring='%%{SOURCE2}' --signature='%%{SOURCE1}' --data='%%{SOURCE0}'
-%autosetup
+%autosetup -n %{upname}-%{version}
 
 %build
 %configure --prefix=/usr
@@ -82,39 +83,39 @@ desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
 %{_mandir}/man1/%{name}.1.gz
 
 %changelog
-* Thu Oct 13 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.7-8
+* Thu Oct 13 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.7-1
 - Bug correction:
   callback.c: save workspace
   atom_action.c: on remove, trigger re-calculate bonding
 
-* Tue Oct 11 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.6-7
+* Tue Oct 11 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.6-1
 - Bug correction: 
   w_library.c: lib_preview_plot = NULL;
 - Improvements:
   main.c: -h
   glview.c: selection delay on mouse pressed/released
 
-* Fri Sep 23 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.5-6
+* Fri Sep 23 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.5-1
 - Bug correction:
   w_search.c: selection not to crash if atom_win is closed
 
-* Thu Sep 22 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.4-5
+* Thu Sep 22 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.4-1
 - Bug correction: 
   read_coord.c: Windows to handle properly EOL symbols
   m_curve.c: Windows to not crash when destroying label widget
   glview.c: correct GWARNING messages on widget scale
 
-* Thu Sep 15 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.3-4
+* Thu Sep 15 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.3-1
 - Bug correction: 
   read_opengl.c: correct 'read_atom_b'
   initring.c: coorect 'send_rings_opengl_'
 
-* Wed Sep 14 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.2-3
+* Wed Sep 14 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.2-1
 - Bug correction: 
   atom_action.c: recompute bonding on passivate
   bdcall.c: do not trigger menu init on passivate
 
-* Tue Sep 13 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.1-2
+* Tue Sep 13 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.1-1
 - Bug correction: 
   double click on workspace
 
