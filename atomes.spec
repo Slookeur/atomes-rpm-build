@@ -1,29 +1,35 @@
 Name:           atomes
 %global upname Atomes-GNU
 Version:        1.1.7
-Release:        5%{?dist}
+Release:        6%{?dist}
 Summary:        An atomistic toolbox
 License:        AGPL-3.0-or-later
 Source0:        https://github.com/Slookeur/%{upname}/archive/refs/tags/v%{version}.tar.gz
-Source1:        ./v%{version}.tar.gz.asc
-Source2:        %{name}.gpg
+# Source1:        ./v%%{version}.tar.gz.asc
+# Source2:        %%{name}.gpg
 URL:            https://%{name}.ipcms.fr/
 
 BuildRequires: gnupg2
 BuildRequires: make
 BuildRequires: automake
 BuildRequires: autoconf
+BuildRequires: pkgconf-pkg-config
 BuildRequires: gcc
 BuildRequires: gcc-gfortran
 BuildRequires: libgfortran
-BuildRequires: gtk3-devel
-BuildRequires: libxml2-devel
-BuildRequires: freeglut-devel
-BuildRequires: mesa-libGLU-devel
-BuildRequires: libepoxy-devel
-BuildRequires: ffmpeg-devel
 BuildRequires: desktop-file-utils
 BuildRequires: libappstream-glib
+
+# pkg-config 
+BuildRequires: pkgconfig(gtk+-3.0)
+BuildRequires: pkgconfig(libxml-2.0)
+BuildRequires: pkgconfig(glu)
+BuildRequires: pkgconfig(glut)
+BuildRequires: pkgconfig(epoxy)
+BuildRequires: pkgconfig(libavutil)
+BuildRequires: pkgconfig(libavcodec)
+BuildRequires: pkgconfig(libavformat)
+BuildRequires: pkgconfig(libswscale)
 
 # For Suse-based linux
 %if 0%{?suse_version}
@@ -31,12 +37,8 @@ BuildRequires: update-desktop-files
 %endif
  
 Requires: gtk3
-Requires: libgfortran
-Requires: libxml2
-Requires: ffmpeg-libs
 Requires: freeglut
 Requires: mesa-libGLU
-Requires: libepoxy
 
 Provides: %{name} = %{version}-%{release}
 
@@ -84,6 +86,9 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/fr.ipcms.%{nam
 %{_metainfodir}/fr.ipcms.%{name}.metainfo.xml
 
 %changelog
+* Fri Oct 21 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.7-6
+- Revised package
+
 * Wed Oct 19 2022 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.1.7-5
 - Revised package
 
