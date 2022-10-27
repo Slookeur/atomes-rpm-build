@@ -4,7 +4,7 @@
 wget https://github.com/Slookeur/Atomes-rpm-build/raw/main/Fedora/atomes.spec
 
 # Getting the latest GNU tarball for the github repo:
-version=1.1.7
+version=1.1.8
 wget https://github.com/Slookeur/Atomes-GNU/archive/refs/tags/v$version.tar.gz
 mv v$version.tar.gz $HOME/rpmbuild/SOURCES/
 
