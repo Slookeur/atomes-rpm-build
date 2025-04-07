@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Getting the latest *.spec file from the github repo:
-wget https://github.com/Slookeur/Atomes-rpm-build/raw/main/Fedora/atomes.spec
+wget https://github.com/Slookeur/atomes-rpm-build/raw/main/Fedora/atomes.spec
 
 # Getting the latest GNU tarball for the github repo:
 version=1.1.15
-wget https://github.com/Slookeur/Atomes-GNU/archive/refs/tags/v$version.tar.gz
+wget https://github.com/Slookeur/atomes-GNU/archive/refs/tags/v$version.tar.gz
 mv v$version.tar.gz $HOME/rpmbuild/SOURCES/
 
 # Building the source rpm:
