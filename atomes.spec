@@ -89,7 +89,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/fr.ipcms.%{nam
 %{_metainfodir}/fr.ipcms.%{name}.appdata.xml
 
 %changelog
-* Thu 11 2026 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.3.0-1
+* Thu Jun 11 2026 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.3.0-1
 - New features (see:  https://github.com/Slookeur/atomes-GNU/releases/tag/v1.3.0)
 
 * Fri Jan 16 2026 Fedora Release Engineering <releng@fedoraproject.org> - 1.2.1-4
@@ -99,7 +99,7 @@ appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/fr.ipcms.%{nam
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_44_Mass_Rebuild
 
 * Wed Oct 01 2025 Dominik Mierzejewski <dominik@greysector.net> - 1.2.1-2
- - Rebuilt for FFmpeg 8
+- Rebuilt for FFmpeg 8
 
 * Tue Sep 30 2025 Sébastien Le Roux <sebastien.leroux@ipcms.unistra.fr> - 1.2.1-1
 - New features (see:  https://github.com/Slookeur/atomes-GNU/releases/tag/v1.2.1)
