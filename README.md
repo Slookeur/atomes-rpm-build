@@ -3,20 +3,19 @@
 ![](https://github.com/Slookeur/atomes.io/workflows/ns/badge.svg)
 ![](https://www.codefactor.io/repository/github/Slookeur/atomes/badge)
 
-[atomes][atomes] is a Free (Open Source) cross-platform software licensed under the terms 
-of the Affero GPL v3+ license. 
-Atoms is a toolbox developed to analyze, to visualize and to create/edit three-dimensional atomistic models.
+[atomes][atomes] is a Free (Open Source) cross-platform software licensed under the terms of the Affero GPL v3+ license. 
+**atomes** is a toolbox developed to analyze, to visualize and to create/edit three-dimensional atomistic models.
 It offers a workspace that allows to have many projects opened simultaneously.
 
 The different projects in the workspace can exchange data: analysis results, atomic coordinates ...
-atomes also provides an advanced input preparation system for further calculations using well known molecular dynamics codes:
+**atomes** also provides an advanced input preparation system for further calculations using well known molecular dynamics codes:
 
 - Classical MD : [DLPOLY][dlpoly] and [LAMMPS][lammps]
 - ab-initio MD : [CPMD][cpmd] and [CP2K][cp2k]
 - QM-MM MD : [CPMD][cpmd] and [CP2K][cp2k]
 
 To prepare the input ﬁlles for these calculations is likely to be the key, and most complicated step towards MD simulations. 
-atomes offers a user-friendly assistant to help and guide the user step by step to achieve this crucial step.
+**atomes** offers a user-friendly assistant to help and guide the user step by step to achieve this crucial step.
 
 ## Features
 
@@ -61,7 +60,7 @@ You will find 2 folders:
 
 ## Build instructions
 
-To build ***atomes***: 
+To build **atomes**: 
 
 ```
 ./configure
@@ -77,7 +76,7 @@ make
 
 #### Building the GTK4 version of ***atomes***
 
-***atomes*** uses the [GTK][gtk] lib for the GUI, by default GTK3 is used, however it is possible to build the GTK4 version (beta).
+**atomes** uses the [GTK][gtk] lib for the GUI, by default GTK3 is used, however it is possible to build the GTK4 version (beta).
 
 To do that:
 
@@ -100,8 +99,8 @@ Here are some issues with GTK4 that cannot be sovled for the time being:
 
 #### Building the serial version of ***atomes***
 
-By default ***atomes*** uses [OpenMP][openmp] to parallelize several calculations over the CPU cores. 
-It is possible to turn this off, and to build a serial version of ***atomes***, to do that:
+By default **atomes** uses [OpenMP][openmp] to parallelize several calculations over the CPU cores. 
+It is possible to turn this off, and to build a serial version of **atomes**, to do that:
 
   1. Configure using the `--disable-openmp` flag:
 
@@ -124,7 +123,7 @@ make install
 ## Who's behind ***atomes***
 
 
-***atomes*** is developed by [Dr. Sébastien Le Roux][slr], research engineer for the [CNRS][cnrs]
+**atomes** is developed by [Dr. Sébastien Le Roux][slr], research engineer for the [CNRS][cnrs]
 
 <p align="center">
   <a href="https://www.cnrs.fr/"><img width="100" src="https://www.cnrs.fr/themes/custom/cnrs/logo.svg" alt="CNRS logo" align="center"></a>
