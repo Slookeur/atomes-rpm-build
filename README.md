@@ -4,7 +4,7 @@
 ![](https://www.codefactor.io/repository/github/Slookeur/atomes/badge)
 
 [atomes][atomes] is a Free (Open Source) cross-platform software licensed under the terms of the Affero GPL v3+ license. 
-**atomes** is a toolbox developed to analyze, to visualize and to create/edit three-dimensional atomistic models.
+**atomes** is a toolbox developed to analyze, to visualize and to create/edit three-dimensional atomic scale models.
 It offers a workspace that allows to have many projects opened simultaneously.
 
 The different projects in the workspace can exchange data: analysis results, atomic coordinates ...
@@ -19,7 +19,7 @@ To prepare the input ﬁlles for these calculations is likely to be the key, and
 
 ## Features
 
-  - Analysis of 3D atomistic models: neutrons and x-rays diffraction, ring statistics, chain statistics, bond order, MSD ...
+  - Analysis of 3D atomic scale models: neutrons and x-rays diffraction, ring statistics, chain statistics, bond order, MSD ...
   - Visualization: measures, coordination polyhedras, advanced coloring, advanced design
   - Edition: molecular library, crystal builder, cell edition, surface creation and passivation ...
   - MD input preparation: 
@@ -88,7 +88,7 @@ To do that:
 
 Note the default flag is: `--with-gtk=3`
 
-  2. Build ***atomes***
+  2. Build **atomes**
 
 ```
 make
@@ -108,7 +108,7 @@ It is possible to turn this off, and to build a serial version of **atomes**, to
 ./configure --disable-openmp
 ```
 
-  2. Build ***atomes***
+  2. Build **atomes**
 
 ```
 make
