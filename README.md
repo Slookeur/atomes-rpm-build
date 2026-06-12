@@ -20,7 +20,7 @@ atomes offers a user-friendly assistant to help and guide the user step by step 
 
 ## Features
 
-  - Analysis of 3D atomistic model: neutron and x-rays diffraction, rings statistics, chain statistics, bond order, MSD ...
+  - Analysis of 3D atomistic models: neutrons and x-rays diffraction, ring statistics, chain statistics, bond order, MSD ...
   - Visualization: measures, coordination polyhedras, advanced coloring, advanced design
   - Edition: molecular library, crystal builder, cell edition, surface creation and passivation ...
   - MD input preparation: 
@@ -138,7 +138,10 @@ make install
 
 ## Documentation
 
-The documenation is hosted on [GitHub][github] here: [atomes documentation][atomes-doc]
+The documentation is hosted on [GitHub][github] here: [atomes documentation][atomes-doc]
+
+Developer contribution guidelines are hosted on [GitHub][github]: [atomes developer guidelines][devel-guide]
+Developer documentation is hosted on [GitHub][github] here: [atomes developer documenation][devel-doc]
 
 ## Tutorials
 
@@ -152,6 +155,8 @@ Tutorial are regrouped and hosted on [GitHub][github] here: [atomes tutorials][a
 [atomes]:https://atomes.ipcms.fr/
 [atomes-doc]:https://slookeur.github.io/atomes-doc/
 [atomes-tuto]:https://slookeur.github.io/atomes-tuto/
+[devel-doc]:https://slookeur.github.io/atomes-doxygen/
+[devel-guide]:https://github.com/Slookeur/atomes/blob/main/DEVELOPER.md
 [dlpoly]:https://www.scd.stfc.ac.uk/Pages/DL_POLY.aspx
 [lammps]:https://lammps.sandia.gov/
 [cpmd]:http://www.cpmd.org
