@@ -18,6 +18,7 @@ BuildRequires: gcc
 BuildRequires: gcc-gfortran
 BuildRequires: libgfortran
 BuildRequires: desktop-file-utils
+BuildRequires: appstream
 BuildRequires: libappstream-glib
 BuildRequires: gettext
 
@@ -70,7 +71,7 @@ step by step to achieve this crucial step.
 
 %check
 desktop-file-validate %{buildroot}/%{_datadir}/applications/%{name}.desktop
-appstream-util validate-relax --nonet %{buildroot}%{_metainfodir}/fr.ipcms.%{name}.appdata.xml
+appstreamcli validate --no-net %{buildroot}%{_metainfodir}/fr.ipcms.%{name}.appdata.xml
 
 %files -f %{name}.lang
 %license COPYING
