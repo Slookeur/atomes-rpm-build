@@ -19,7 +19,6 @@ BuildRequires: gcc-gfortran
 BuildRequires: libgfortran
 BuildRequires: desktop-file-utils
 BuildRequires: appstream
-BuildRequires: libappstream-glib
 BuildRequires: gettext
 
 # pkg-config 
